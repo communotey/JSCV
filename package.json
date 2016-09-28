@@ -1,0 +1,30 @@
+{
+  "name": "jscv",
+  "version": "0.0.1",
+  "description": "Computer Vision done in Node.js ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/communotey/JSCV.git"
+  },
+  "keywords": [
+    "Chris",
+    "Cates",
+    "JS",
+    "CV",
+    "Computer",
+    "Vision"
+  ],
+  "author": "Chris Cates",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/communotey/JSCV/issues"
+  },
+  "homepage": "https://github.com/communotey/JSCV#readme",
+  "dependencies": {
+    "png-to-matrix": "^1.0.1"
+  }
+}

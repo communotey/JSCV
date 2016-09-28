@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<style>
+		body {
+			margin: 0px;
+		}
+		div#coordinates {
+			position: fixed;
+			right: 15px;
+			top: 15px;
+			background: white;
+			z-index: 999;
+		}
+		</style>
+		<img src="test_cases/alphabet.png"/>
+		<div id="coordinates"></div>
+		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+		    	$(document).mousemove(function(e){
+		        	$('#coordinates').html('x: ' + e.pageX + ' y : ' + e.pageY)
+		    	})
+			})
+		</script>
+	</body>
+</html>
