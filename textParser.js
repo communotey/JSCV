@@ -4,6 +4,7 @@ module.exports = (image, color, variance) => {
 
 	pngToMatrix(image, (matrix) => {
 
+		//Indentiy all the valid points in the matrix
 		var points = matrix.map((y, i) => {
 			return y.map((x, ii) => {
 				if (
@@ -19,6 +20,7 @@ module.exports = (image, color, variance) => {
 			});
 		});
 
+		//For the test case, get the shape of lowercase A first
 		var shapeOfA = points.filter((y, i) => {
 			if (i < 35 && y.filter((point, ii) => { return point > 0; }).length > 0) {
 				return true;
@@ -37,7 +39,31 @@ module.exports = (image, color, variance) => {
 			});
 		})
 
-		console.log(shapeOfA);
+		//Map the matrix's indices to a hashtable to get the min and max range of X
+		var xMinRange, xMaxRange;
+		var indices = [];
+
+		shapeOfA.map((y, i) => {
+			y.map((point, ii) => {
+				indices.push(point[1]);
+			});
+		});
+
+		xMinRange = Math.min.apply(Math, indices);
+		xMaxRange = Math.max.apply(Math, indices);
+
+		//Define the true shape from offset = 0 index.
+		var shape = shapeOfA.map((y, i) => {
+			return y.map((point, ii) => {
+				point[1] = point[1] - xMinRange;
+				return point;
+			});
+		});
+
+		//Define the true range (which is simply max minus min range)
+		var xRange = xMaxRange - xMinRange;
+
+		console.log(xRange, shape);
 
 	});
 
