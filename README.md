@@ -1,4 +1,9 @@
 # JSCV
+
+[![npm version](https://badgen.net/npm/v/jscv)](https://www.npmjs.com/package/jscv)
+[![dependencies Status](https://badgen.net/david/dep/communotey/jscv)](https://david-dm.org/communotey/jscv)
+[![codecov](https://badgen.net/codecov/c/github/communotey/jscv)](https://codecov.io/gh/communotey/jscv)
+
 ## Computer Vision done in Node.js
 ### By Chris Cates :star:
 
